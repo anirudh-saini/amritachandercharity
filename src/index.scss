@@ -1,0 +1,23 @@
+@use "./styles/media_queries" as ab;
+@use "./styles/reset";
+* {
+    // font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #161616;
+}
+:root {
+    --white: #ffffff;
+}
+.container {
+    width: min(85%, 80em);
+    margin-inline: auto;
+}
+h1 {
+    font-size: clamp(2.25rem, 4.5vi, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vi, 3.5rem);
+}
