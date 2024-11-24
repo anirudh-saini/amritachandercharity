@@ -2,10 +2,25 @@
 @use "./styles/reset";
 * {
     // font-family: "Poppins", sans-serif;
+    .slick-prev::before,
+    .slick-next::before {
+        color: #344b9b !important;
+        font-size: 20px;
+    }
+
+    .slick-prev:hover::before,
+    .slick-next:hover::before {
+        color: #344b9b !important;
+    }
+    .slick-slide > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 body {
     margin: 0;
-    background-color: #161616;
+    // background-color: #161616;
 }
 :root {
     --white: #ffffff;

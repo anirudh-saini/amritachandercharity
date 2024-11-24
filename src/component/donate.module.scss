@@ -1,0 +1,53 @@
+@use "/src/styles/media_queries" as ab;
+.donate {
+    display: flex;
+    margin-block: 4em;
+    gap: 1em;
+    @include ab.screen-60 {
+        flex-direction: column;
+    }
+    > div {
+        width: 50%;
+        @include ab.screen-60 {
+            width: 100%;
+        }
+        // outline: 2px solid red;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .para {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1em, 2vi, 2em);
+        h2 {
+            font-size: 1.3rem;
+            color: #344b9b;
+        }
+        > :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.5em, 1vi, 1em);
+            p {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                    }
+                }
+            }
+            button {
+                cursor: pointer;
+                width: 8em;
+                border-radius: 0.3em;
+                border: none;
+                padding: 0.3em;
+                font-size: 1rem;
+                color: white;
+                background-color: #344b9b;
+            }
+        }
+    }
+}

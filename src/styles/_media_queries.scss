@@ -39,3 +39,10 @@
         @content;
     }
 }
+
+//800
+@mixin screen-50 {
+    @media (max-width: 50em) {
+        @content;
+    }
+}
