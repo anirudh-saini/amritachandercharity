@@ -1,0 +1,22 @@
+.vision {
+  .content1 {
+    outline: 2px solid red;
+    display: flex;
+    justify-content: center;
+    p {
+      outline: 2px solid red;
+      text-align: center;
+      width: min(40em, 80%);
+    }
+  }
+  .content2 {
+    outline: 2px solid red;
+    padding-block: 4em;
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      text-align: center;
+    }
+  }
+}
