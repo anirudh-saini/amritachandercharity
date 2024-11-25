@@ -1,73 +1,85 @@
 @use "/src/styles/media_queries" as ab;
 
 .charity {
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.23991594928987214) 0%,
-      rgba(0, 0, 0, 0.42759101931788346) 0%
-    ),
-    url("../../public/hero/h4.jpeg"); /* Layer the image below the gradient */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.23991594928987214) 0%,
+            rgba(0, 0, 0, 0.42759101931788346) 0%
+        ),
+        url("../../public/hero/h4.jpeg"); /* Layer the image below the gradient */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  > div {
-    display: flex;
-    gap: clamp(3em, 4vi, 4em);
-    padding-block: 7em;
-    @include ab.screen-40 {
-      flex-direction: column;
-    }
     > div {
-      width: 50%;
-      @include ab.screen-40 {
-        width: 100%;
-      }
-    }
-    .make {
-      //   outline: 2px solid red;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2em;
-      color: white;
-    }
-    .choose {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2em;
-      > :nth-child(1) {
-        text-align: center;
-        color: white;
-      }
-      > :nth-child(2) {
-        // outline: 2px solid red;
         display: flex;
-        justify-content: space-evenly;
-        @include ab.screen-40 {
-          flex-direction: column;
-          gap: 2em;
+        gap: clamp(3em, 4vi, 4em);
+        padding-block: 7em;
+        @include ab.screen-50 {
+            flex-direction: column;
         }
         > div {
-          //   outline: 2px solid red;
-          text-align: center;
-          color: white;
-          @include ab.screen-40 {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          a {
-            color: white;
-            text-decoration: none;
-          }
-          img {
-            width: clamp(5em, 6vi, 6em);
-            aspect-ratio: 1;
-          }
+            width: 50%;
+            @include ab.screen-50 {
+                width: 100%;
+            }
         }
-      }
+        .make {
+            //   outline: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2em;
+            color: white;
+            p {
+                font-weight: 600;
+            }
+        }
+        .choose {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2em;
+            > :nth-child(1) {
+                text-align: center;
+                color: white;
+                font-weight: 600;
+            }
+            > :nth-child(2) {
+                // outline: 2px solid red;
+                display: flex;
+                justify-content: space-evenly;
+                @include ab.screen-50 {
+                    flex-direction: column;
+                    gap: 2em;
+                }
+                > div {
+                    // outline: 2px solid red;
+                    text-align: center;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: clamp(1em, 2vi, 2em);
+                    // @include ab.screen-40 {
+                    //     display: flex;
+                    //     align-items: center;
+                    //     flex-direction: column;
+                    // }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: clamp(1em, 2vi, 2em);
+                        color: white;
+                        text-decoration: none;
+                    }
+                    img {
+                        width: clamp(5em, 6vi, 6em);
+                        aspect-ratio: 1;
+                    }
+                }
+            }
+        }
     }
-  }
 }

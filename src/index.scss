@@ -1,7 +1,7 @@
 @use "./styles/media_queries" as ab;
 @use "./styles/reset";
 * {
-    // font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     .slick-prev::before,
     .slick-next::before {
         color: #344b9b !important;

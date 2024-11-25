@@ -101,10 +101,7 @@ export const Carousel = () => {
                     >
                         {images.map((src, index) => (
                             <a href={src} key={index}>
-                                <img
-                                    alt={`Gallery image ${index + 1}`}
-                                    src={src}
-                                />
+                                <img alt={`Bhandara`} src={src} />
                             </a>
                         ))}
                     </LightGallery>
