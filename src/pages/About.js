@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "./donate.module.scss";
-export const Donate = () => {
+import styles from "./about.module.scss";
+export const About = () => {
   return (
-    <div className={`container ${styles.donate}`}>
-      <div className={styles.img}>
-        <img src="donate.jpg" alt="" />
+    <>
+      <div className={styles.about}>
+        <h1>About Us</h1>
       </div>
-      <div>
+      <div className={`container ${styles.content}`}>
         <div className={styles.para}>
           <div>
-            <h2>Amrita Chander Jankalyan Charitable Trust</h2>
+            <h2>About Us</h2>
           </div>
           <div>
             <p>
@@ -40,10 +40,13 @@ export const Donate = () => {
               up medical camps and food distribution programs to keep in check
               the health of the citizens.
             </p>
-            <button>DONATE NOW</button>
+            <button>Contact Now</button>
           </div>
         </div>
+        <div>
+          <img src="/gallery/gallery2/g25.jpg" alt="vsdvdvsd" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };

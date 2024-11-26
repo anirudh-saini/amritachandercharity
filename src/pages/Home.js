@@ -8,13 +8,13 @@ import { Vision } from "../component/Vision";
 import { Charity } from "../component/Charity";
 export const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Donate />
       <Carousel />
       <Readmore />
       <Vision />
       <Charity />
-    </div>
+    </>
   );
 };
