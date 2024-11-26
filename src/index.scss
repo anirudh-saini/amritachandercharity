@@ -1,5 +1,9 @@
 @use "./styles/media_queries" as ab;
 @use "./styles/reset";
+@import "lightgallery/scss/lightgallery.scss";
+@import "lightgallery/scss/lg-zoom.scss";
+// @import "lightgallery/scss/lg-controls.scss";
+
 * {
     font-family: "Poppins", sans-serif;
     .slick-prev::before,
@@ -36,3 +40,6 @@ h1 {
 h2 {
     font-size: clamp(1.75rem, 4vi, 3.5rem);
 }
+// 01374B
+// E3F6FD
+// 344B9B

@@ -6,15 +6,16 @@ import { Carousel } from "../component/Carousel";
 import { Readmore } from "../component/Readmore";
 import { Vision } from "../component/Vision";
 import { Charity } from "../component/Charity";
+
 export const Home = () => {
-  return (
-    <>
-      <Hero />
-      <Donate />
-      <Carousel />
-      <Readmore />
-      <Vision />
-      <Charity />
-    </>
-  );
+    return (
+        <>
+            <Hero />
+            <Donate />
+            <Carousel />
+            <Readmore />
+            <Vision />
+            <Charity />
+        </>
+    );
 };
