@@ -1,0 +1,64 @@
+.color {
+  background-color: #01374b;
+  color: white;
+}
+.footer {
+  padding-block: 2em;
+  display: grid;
+  gap: 3em;
+  .container {
+    display: grid;
+    gap: clamp(1em, 2.5vi, 2.5em);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    > div {
+      //   outline: 2px solid red;
+      h2 {
+        font-size: 1.2rem;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    .link {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      > :nth-child(2) {
+        // outline: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: clamp(0.8em, 2vi, 2em);
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+        }
+      }
+    }
+    .address {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      > :nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        > div {
+          display: flex;
+          gap: 1em;
+        }
+      }
+    }
+  }
+  .copy {
+    padding-inline: 1em;
+    text-align: center;
+  }
+}
