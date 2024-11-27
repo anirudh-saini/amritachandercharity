@@ -24,6 +24,8 @@
     background-color: #ebf9fe;
 }
 .gallery1 {
+    margin-top: 2em;
+
     text-align: center;
     padding-block: 2em;
     p {
@@ -37,7 +39,9 @@
         flex-wrap: wrap;
         gap: 1em;
         justify-content: center;
+        // outline: 2px solid red;
         img {
+            // outline: 2px solid red;
             border-radius: 0.3em;
             width: 10em;
             aspect-ratio: 1;
@@ -45,6 +49,8 @@
     }
 }
 .gallery2 {
+    margin-top: 2em;
+    background-color: #ebf9fe;
     padding-block: 2em;
     display: flex;
     gap: 1em;

@@ -58,41 +58,64 @@ export const Gallery = () => {
             <div className={styles.gallery}>
                 <h1>Gallery</h1>
             </div>
-            <div className={styles.color}>
-                <div className={`container ${styles.gallery1}`}>
-                    <p>Our Recent Food Distributions During Nav Durga</p>
-                    <LightGallery
-                        speed={500}
-                        // plugins={[lgZoom]}
-                        elementClassNames={styles.slide}
-                    >
-                        {gallery1.map((src, index) => (
-                            <a href={src} key={index}>
-                                <img alt={`Bhandara`} src={src} />
-                            </a>
-                        ))}
-                    </LightGallery>
-                </div>
-                <div className={`container ${styles.gallery2}`}>
-                    <div>
+            <div>
+                <div className={styles.color}>
+                    <div className={`container ${styles.gallery1}`}>
+                        <p>Our Recent Food Distributions During Nav Durga</p>
                         <LightGallery
                             speed={500}
                             // plugins={[lgZoom]}
                             elementClassNames={styles.slide}
                         >
-                            {gallery2.map((src, index) => (
+                            {gallery1.map((src, index) => (
                                 <a href={src} key={index}>
                                     <img alt={`Bhandara`} src={src} />
                                 </a>
                             ))}
                         </LightGallery>
                     </div>
-                    <div>
-                        <p>IMAGE GALLERY</p>
+                </div>
+                <div className={styles.color}>
+                    <div className={`container ${styles.gallery1}`}>
+                        <p>Child day care Centre with Angan and Anchal</p>
+                        <LightGallery
+                            speed={500}
+                            // plugins={[lgZoom]}
+                            elementClassNames={styles.slide}
+                        >
+                            {gallery1.map((src, index) => (
+                                <a href={src} key={index}>
+                                    <img alt={`Bhandara`} src={src} />
+                                </a>
+                            ))}
+                        </LightGallery>
+                    </div>
+                </div>
+                <div className={styles.color}>
+                    <div className={`container ${styles.gallery2}`}>
                         <div>
-                            <img src="/donate.jpg" alt="" />
+                            <LightGallery
+                                speed={500}
+                                // plugins={[lgZoom]}
+                                elementClassNames={styles.slide}
+                            >
+                                {gallery2.map((src, index) => (
+                                    <a href={src} key={index}>
+                                        <img alt={`Bhandara`} src={src} />
+                                    </a>
+                                ))}
+                            </LightGallery>
+                        </div>
+                        <div>
+                            <p>IMAGE GALLERY</p>
                             <div>
-                                <p>Amrita Chander Jankalyan Charitable Trust</p>
+                                <img src="/donate.jpg" alt="" />
+                                <div>
+                                    <p>
+                                        Amrita Chander Jankalyan Charitable
+                                        Trust
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
