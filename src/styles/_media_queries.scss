@@ -46,3 +46,15 @@
         @content;
     }
 }
+//480
+@mixin screen-30 {
+    @media (max-width: 30em) {
+        @content;
+    }
+}
+//860
+@mixin screen-53 {
+    @media (max-width: 53.75em) {
+        @content;
+    }
+}

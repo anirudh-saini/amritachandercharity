@@ -1,0 +1,38 @@
+.media {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap:  1em;
+  margin-block: 2em;
+  //   padding: 1em;
+  > div {
+    border: 0.1em solid black;
+    padding: 0.3em;
+    // justify-self: center;
+    img {
+      width: 100%;
+      //   outline: 2px solid red;
+    }
+  }
+  .news {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    border: none;
+    .video {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      video {
+        //
+        width: 16.5em;
+      }
+      .para {
+        outline: 2px solid red;
+        width: 16.5em;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,61 +1,61 @@
 .carousel {
-    background-color: #ebf9fe;
-    padding-block: 4em;
+  background-color: #ebf9fe;
+  padding-block: 4em;
 
-    > div {
-        display: flex;
-        flex-direction: column;
-        gap: clamp(1em, 2vw, 2em);
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1em, 2vw, 2em);
 
-        .heading {
-            h3 {
-                font-size: 1.6rem;
-                color: #344b9b;
-                text-align: center;
-            }
-        }
-
-        .gallery {
-            .slide {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1em;
-                // outline: 2px solid red;
-
-                a {
-                    justify-items: center;
-                    // align-items: center;
-
-                    // outline: 2px solid red;
-                    img {
-                        width: 12.5em;
-                        object-fit: cover center;
-                        aspect-ratio: 1;
-                        border-radius: 0.5em;
-                    }
-                }
-            }
-        }
-        .autocarousel {
-            .cards {
-                .c1 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    .imageWrapper {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100%;
-                        img {
-                            max-width: 100%;
-                            max-height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                }
-            }
-        }
+    .heading {
+      h3 {
+        font-size: 1.6rem;
+        color: #344b9b;
+        text-align: center;
+      }
     }
+
+    .gallery {
+      .slide {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+        // outline: 2px solid red;
+
+        a {
+          justify-items: center;
+          // align-items: center;
+          justify-self: center;
+          // outline: 2px solid red;
+          img {
+            width: 12.5em;
+            object-fit: cover center;
+            aspect-ratio: 1;
+            border-radius: 0.5em;
+          }
+        }
+      }
+    }
+    .autocarousel {
+      .cards {
+        .c1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .imageWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
 }
