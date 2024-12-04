@@ -19,7 +19,7 @@
     "sass": "^1.81.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4",
-    "yup": "^1.4.0"
+    "yup": "^1.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
