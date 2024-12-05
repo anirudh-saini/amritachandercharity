@@ -9,29 +9,32 @@ import { Charity } from "../component/Charity";
 import { Modal } from "../component/Modal";
 
 export const Home = () => {
-  const [isModalOpen, setModalOpen] = useState(true); 
+    const [isModalOpen, setModalOpen] = useState(true);
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden"; 
-      document.body.style.overflow = "auto"; 
-    }
-    return () => {
-      document.body.style.overflow = "auto"; 
+    const closeModal = () => {
+        setModalOpen(false);
     };
-  }, [isModalOpen]);
-  return (
-    <>
-      {isModalOpen && <Modal onClose={closeModal} />}
-      <Hero />
-      <Donate />
-      <Carousel />
-      <Readmore />
-      <Vision />
-      <Charity />
-    </>
-  );
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+        } else {
+            document.body.style.overflow = "auto"; // Allow scrolling when modal is closed
+        }
+
+        return () => {
+            document.body.style.overflow = "auto"; // Cleanup on unmount or effect re-run
+        };
+    }, [isModalOpen]);
+
+    return (
+        <>
+            {isModalOpen && <Modal onClose={closeModal} />}
+            <Hero />
+            <Donate />
+            <Carousel />
+            <Readmore />
+            <Vision />
+            <Charity />
+        </>
+    );
 };

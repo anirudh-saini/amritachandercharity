@@ -20,6 +20,20 @@ export const Gallery = () => {
         "/gallery/gallery1/g12.jpg",
         "/gallery/gallery1/g13.jpg",
     ];
+    const gallery3 = [
+        "/child/c1.jpeg",
+        "/child/c2.jpeg",
+        "/child/c3.jpeg",
+        "/child/c4.jpeg",
+        "/child/c5.jpeg",
+        "/child/c6.jpeg",
+        "/child/c7.jpeg",
+        "/child/c8.jpeg",
+        "/child/c9.jpeg",
+        "/child/c10.jpeg",
+        "/child/c11.jpeg",
+        "/child/c12.jpeg",
+    ];
     const gallery2 = [
         "/gallery/gallery2/g1.jpg",
         "/gallery/gallery2/g2.jpg",
@@ -83,9 +97,12 @@ export const Gallery = () => {
                             // plugins={[lgZoom]}
                             elementClassNames={styles.slide}
                         >
-                            {gallery1.map((src, index) => (
+                            {gallery3.map((src, index) => (
                                 <a href={src} key={index}>
-                                    <img alt={`Bhandara`} src={src} />
+                                    <img
+                                        alt={`Child day care Centre`}
+                                        src={src}
+                                    />
                                 </a>
                             ))}
                         </LightGallery>
@@ -101,7 +118,7 @@ export const Gallery = () => {
                             >
                                 {gallery2.map((src, index) => (
                                     <a href={src} key={index}>
-                                        <img alt={`Bhandara`} src={src} />
+                                        <img alt={`Gallery`} src={src} />
                                     </a>
                                 ))}
                             </LightGallery>

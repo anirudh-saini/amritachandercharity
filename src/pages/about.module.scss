@@ -61,10 +61,10 @@
             gap: clamp(0.5em, 1vi, 1em);
             p {
                 ul {
-                    margin: 0;
-                    padding: 0;
+                    // margin: 0;
+                    // padding: 0;
                     li {
-                        list-style: none;
+                        // list-style: none;
                     }
                 }
             }
@@ -76,7 +76,7 @@
                 padding: 0.3em;
                 font-size: clamp(0.8rem, 1.2vi, 1.2rem);
                 color: white;
-                background-color: #000000;
+                background-color: #344b9b;
             }
         }
     }
