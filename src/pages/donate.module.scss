@@ -1,160 +1,161 @@
 .donate {
-  height: 50vh;
-  width: 100%;
-  //   outline: 2px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.23991594928987214) 0%,
-      rgba(0, 0, 0, 0.42759101931788346) 0%
-    ),
-    url("../../public/about.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  h1 {
-    font-size: clamp(2rem, 4vi, 4rem);
-  }
+    height: 50vh;
+    width: 100%;
+    //   outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.23991594928987214) 0%,
+            rgba(0, 0, 0, 0.42759101931788346) 0%
+        ),
+        url("../../public/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        font-size: clamp(2rem, 4vi, 4rem);
+    }
 }
 .content {
-  display: flex;
-  gap: clamp(1em, 3vi, 3em);
-  margin-block: 3em;
-  > div {
-    // outline: 2px solid red;
-    width: 50%;
-  }
-  .para {
     display: flex;
-    flex-direction: column;
-    gap: clamp(1em, 2vi, 2em);
-    > :nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-      ul {
-        margin: 0;
-        padding: 0;
-        li {
-          list-style: none;
-        }
-      }
+    gap: clamp(1em, 3vi, 3em);
+    margin-block: 3em;
+    > div {
+        // outline: 2px solid red;
+        width: 50%;
     }
-  }
-  .donation_form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8em;
-    .form_1 {
-      outline: 2px solid red;
-      h2 {
-        padding-block: clamp(1em, 2vi, 2em);
-        padding-inline: 1em;
-        font-size: 1.5rem;
-        border-bottom: 0.01em solid grey;
-        background-color: rgb(207, 207, 207);
-      }
-      > div {
-        padding: 2em;
+    .para {
         display: flex;
         flex-direction: column;
-        gap: 1em;
-        label:has([type="radio"]:not(:disabled)) {
-          cursor: pointer;
+        gap: clamp(1em, 2vi, 2em);
+        > :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                }
+            }
         }
-
-        label:has([type="radio"]:checked) {
-          border-color: #14bf8b;
-          background-color: #14bf8b;
-          color: #fff;
-          > input {
-            background-color: #14bf8b;
-          }
-        }
-
-        input[type="radio"] {
-          display: none; /* Hide the radio button */
-        }
-        .custom {
-          input {
-            width: 100%;
-          }
-
-          outline: 2px solid red;
-        }
-        > div {
-          display: flex;
-          gap: 1em;
-          label {
-            padding-block: 0.5em;
-            text-align: center;
-            width: 100%;
-          }
-        }
-      }
     }
-    .form_2 {
-      outline: 2px solid red;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      .input:focus-within label {
-        top: -0.6em;
-        font-size: 0.8em;
-        color: #333;
-      }
-
-      .input {
-        .floating {
-          top: -0.6em;
-          font-size: 0.8em;
-          color: #333;
-        }
+    .donation_form {
         display: flex;
         flex-direction: column;
-        flex: 1;
-        position: relative;
-        label {
-          position: absolute;
-          top: 0.2em;
-          left: 0.5em;
-          pointer-events: none;
-          transition: 0.2s ease all;
-          -moz-transition: 0.2s ease all;
-          -webkit-transition: 0.2s ease all;
+        gap: 0.8em;
+        .form_1 {
+            outline: 2px solid #344b9b;
+            h2 {
+                padding-block: clamp(1em, 2vi, 2em);
+                padding-inline: 1em;
+                font-size: 1.5rem;
+                border-bottom: 0.01em solid grey;
+                background-color: rgb(207, 207, 207);
+            }
+            > div {
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                label:has([type="radio"]:not(:disabled)) {
+                    cursor: pointer;
+                }
+
+                label:has([type="radio"]:checked) {
+                    border-color: #344b9b;
+                    background-color: #344b9b;
+                    color: #fff;
+                    > input {
+                        background-color: #344b9b;
+                    }
+                }
+
+                input[type="radio"] {
+                    display: none; /* Hide the radio button */
+                }
+                .custom {
+                    input {
+                        width: 100%;
+                    }
+
+                    outline: 2px solid #344b9b;
+                }
+                > div {
+                    display: flex;
+                    gap: 1em;
+                    label {
+                        padding-block: 0.5em;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
         }
-        // border-bottom: 0.1em solid black; // Ensures the inputs take up equal space
-      }
+        .form_2 {
+            outline: 2px solid #344b9b;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            .input:focus-within label {
+                top: -0.6em;
+                font-size: 0.8em;
+                color: #333;
+            }
 
-      > div {
-        display: flex;
-        gap: 1em; // Adjust the gap to your preference
-      }
+            .input {
+                .floating {
+                    top: -1em;
+                    font-size: 0.8em;
+                    color: #333;
+                }
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                position: relative;
+                padding-left: 0.5em;
+                label {
+                    position: absolute;
+                    top: 0.2em;
+                    left: 0.5em;
+                    pointer-events: none;
+                    transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                }
+                // border-bottom: 0.1em solid black; // Ensures the inputs take up equal space
+            }
 
-      .input input {
-        width: 100%;
-        border: none;
-        border-bottom: 0.1em solid black; // Ensures the input takes full width within its container
-      }
-      .input input:focus {
-        border: none;
-        border-bottom: 0.1em solid black; // Remove border when focused
-        outline: none;
-      }
-      // .input input:focus + label {
-      //   outline: 2px solid red;
-      //   top: -80px;
-      //   font-size: 13px;
-      // }
-      .input.date_of_birth {
-        flex: 1;
-      }
-      .input.full_name {
-        flex: 1; // Allows Full Name input to take 50% of the width
-      }
+            > div {
+                display: flex;
+                gap: 1em; // Adjust the gap to your preference
+            }
+
+            .input input {
+                width: 100%;
+                border: none;
+                border-bottom: 0.1em solid black; // Ensures the input takes full width within its container
+            }
+            .input input:focus {
+                border: none;
+                border-bottom: 0.1em solid black; // Remove border when focused
+                outline: none;
+            }
+            // .input input:focus + label {
+            //   outline: 2px solid red;
+            //   top: -80px;
+            //   font-size: 13px;
+            // }
+            .input.date_of_birth {
+                flex: 1;
+            }
+            .input.full_name {
+                flex: 1; // Allows Full Name input to take 50% of the width
+            }
+        }
     }
-  }
 }
