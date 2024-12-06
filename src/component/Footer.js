@@ -74,7 +74,7 @@ export const Footer = () => {
                 </div>
                 <div className={styles.copy}>
                     <p>
-                        Ⓒ 2020 Amrita Chander Jankalyan Charitable Trust | All
+                        Ⓒ 2024 Amrita Chander Jankalyan Charitable Trust | All
                         rights reserved.
                     </p>
                     <p>

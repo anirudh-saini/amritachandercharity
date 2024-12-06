@@ -1,46 +1,46 @@
 .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5); // Semi-transparent background
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10; // Ensure modal is on top
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); // Semi-transparent background
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; // Ensure modal is on top
 }
 
 .modalContent {
-  position: relative;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  width: clamp(21.25em, 44vi, 44em);
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40vw;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bannerImage {
-  border-radius: 10px;
-  width: clamp(20em, 42vi, 42em);
-  aspect-ratio: 1/1;
+    border-radius: 10px;
+    width: 35vw;
+    aspect-ratio: 1/1;
 }
 
 .closeButton {
-  position: absolute;
-  top: 0.3em;
-  right: clamp(0.4em, 0.6vi, 0.6em);
-  background: transparent;
-  border: none;
-  font-size: clamp(1.2rem, 1.5vi, 1.5rem);
-  cursor: pointer;
-  color: #333;
-  font-weight: bold;
+    position: absolute;
+    top: 0.3em;
+    right: clamp(0.4em, 0.6vi, 0.6em);
+    background: transparent;
+    border: none;
+    font-size: clamp(1.2rem, 1.5vi, 1.5rem);
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
 
-  &:hover {
-    color: red;
-  }
+    &:hover {
+        color: red;
+    }
 }
