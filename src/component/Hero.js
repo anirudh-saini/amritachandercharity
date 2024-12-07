@@ -17,9 +17,7 @@ export const Hero = () => {
     return (
         <div className={styles.sliderContainer}>
             <Slider {...settings} className={styles.slide}>
-                <div className={styles.h1}>
-                    <img src="/hero/h1.png" alt="img" />
-                </div>
+               
                 <div className={styles.h1}>
                     <img src="/hero/h2.jpg" alt="img" />
                 </div>

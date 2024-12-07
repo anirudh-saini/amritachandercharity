@@ -1,3 +1,4 @@
+@use "/src/styles/media_queries" as ab;
 .modalOverlay {
     position: fixed;
     top: 0;
@@ -21,21 +22,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include ab.screen-64{
+        width: 70vw;
+    }
 }
 
 .bannerImage {
     border-radius: 10px;
     width: 35vw;
     aspect-ratio: 1/1;
+     @include ab.screen-64{
+        width: 65vw;
+    }
 }
 
 .closeButton {
     position: absolute;
-    top: 0.3em;
-    right: clamp(0.4em, 0.6vi, 0.6em);
+    top: clamp(0.1em, 0.3vi, 0.3em);
+    right: clamp(0.1em, 0.6vi, 0.6em);
     background: transparent;
     border: none;
-    font-size: clamp(1.2rem, 1.5vi, 1.5rem);
+    font-size: clamp(1.5rem, 2vi, 2rem);
     cursor: pointer;
     color: #333;
     font-weight: bold;

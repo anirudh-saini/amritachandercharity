@@ -6,29 +6,29 @@ import { Carousel } from "../component/Carousel";
 import { Readmore } from "../component/Readmore";
 import { Vision } from "../component/Vision";
 import { Charity } from "../component/Charity";
-import { Modal } from "../component/Modal";
+// import { Modal } from "../component/Modal";
 
 export const Home = () => {
-    const [isModalOpen, setModalOpen] = useState(true);
+    // const [isModalOpen, setModalOpen] = useState(true);
 
-    const closeModal = () => {
-        setModalOpen(false);
-    };
-    useEffect(() => {
-        if (isModalOpen) {
-            document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
-        } else {
-            document.body.style.overflow = "auto"; // Allow scrolling when modal is closed
-        }
+    // const closeModal = () => {
+    //     setModalOpen(false);
+    // };
+    // useEffect(() => {
+    //     if (isModalOpen) {
+    //         document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+    //     } else {
+    //         document.body.style.overflow = "auto"; // Allow scrolling when modal is closed
+    //     }
 
-        return () => {
-            document.body.style.overflow = "auto"; // Cleanup on unmount or effect re-run
-        };
-    }, [isModalOpen]);
+    //     return () => {
+    //         document.body.style.overflow = "auto"; // Cleanup on unmount or effect re-run
+    //     };
+    // }, [isModalOpen]);
 
     return (
         <>
-            {isModalOpen && <Modal onClose={closeModal} />}
+            {/* {isModalOpen && <Modal onClose={closeModal} />} */}
             <Hero />
             <Donate />
             <Carousel />
