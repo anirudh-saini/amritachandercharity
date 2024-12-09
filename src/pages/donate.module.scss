@@ -49,29 +49,60 @@
         flex-direction: column;
         gap: 0.8em;
         .form_1 {
-            outline: 2px solid #344b9b;
             h2 {
                 padding-block: clamp(1em, 2vi, 2em);
                 padding-inline: 1em;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 1.8vi, 1.8rem);
                 border-bottom: 0.01em solid grey;
-                background-color: rgb(207, 207, 207);
+                background-color: #f7f7f7;
+                border-radius: 0.8em 0.8em 0 0;
             }
             > div {
+                p {
+                    display: flex;
+                    gap: 0.5em;
+                    font-size: 0.8rem;
+                    color: #484848;
+                    font-weight: 500;
+                }
+                .message {
+                    color: #272727;
+                    font-weight: 400;
+                }
+                border: 0.1em solid #344b9b;
+                border-top: none;
+                border-radius: 0 0 0.5em 0.5em;
                 padding: 2em;
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
-                label:has([type="radio"]:not(:disabled)) {
-                    cursor: pointer;
+                > div {
+                    .label {
+                        padding-block: 0.8em;
+                        box-shadow: 0px 4px 5px #5a5a5a7a;
+                    }
                 }
 
+                label:has([type="radio"]:not(:disabled)) {
+                    cursor: pointer;
+                    // outline: 2px solid red;
+                    font-weight: 500;
+                    border-radius: 0.5em;
+                    // padding-block: 0.8em;
+                }
+                label:has([type="radio"]:not(:checked)) {
+                    background-color: #fdfcf9;
+                    border: 0.1em solid #e8e6de;
+                }
                 label:has([type="radio"]:checked) {
                     border-color: #344b9b;
                     background-color: #344b9b;
                     color: #fff;
+                    box-shadow: 0px 4px 6px rgba(52, 75, 155, 0.4);
                     > input {
                         background-color: #344b9b;
+                        border-color: #344b9b;
+                        color: #fff;
                     }
                 }
 
@@ -80,10 +111,13 @@
                 }
                 .custom {
                     input {
+                        padding-left: 0.8em;
                         width: 100%;
+                        padding-block: 0.8em;
+                        background-color: #fdfcf9;
+                        border: 0.1em solid #e8e6de;
+                        border-radius: 0.5em;
                     }
-
-                    outline: 2px solid #344b9b;
                 }
                 > div {
                     display: flex;

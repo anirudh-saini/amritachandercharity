@@ -60,7 +60,8 @@
                 }
                 .number {
                     display: flex;
-                    gap: 1em;
+                    flex-wrap: wrap;
+                    gap: clamp(0.5em, 1vi, 1em);
                 }
             }
         }

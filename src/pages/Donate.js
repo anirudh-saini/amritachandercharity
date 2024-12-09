@@ -184,9 +184,12 @@ export const Donate = () => {
                                 <div className={styles.form_1}>
                                     <h2>Donate and Save Tax</h2>
                                     <div>
-                                        <p>Choose an amount donate</p>
+                                        <p>
+                                            <img src="/amount.svg" />
+                                            Choose an amount donate
+                                        </p>
                                         <div>
-                                            <label>
+                                            <label className={styles.label}>
                                                 <Field
                                                     type="radio"
                                                     name="amount"
@@ -205,7 +208,7 @@ export const Donate = () => {
                                                     ₹1000
                                                 </span>
                                             </label>
-                                            <label>
+                                            <label className={styles.label}>
                                                 <Field
                                                     type="radio"
                                                     name="amount"
@@ -223,9 +226,13 @@ export const Donate = () => {
                                             </label>
                                         </div>
 
-                                        {message && <p>{message}</p>}
+                                        {message && (
+                                            <p className={styles.message}>
+                                                {message}
+                                            </p>
+                                        )}
                                         <div>
-                                            <label>
+                                            <label className={styles.label}>
                                                 <Field
                                                     type="radio"
                                                     name="amount"
@@ -241,7 +248,7 @@ export const Donate = () => {
                                                     ₹4000
                                                 </span>
                                             </label>
-                                            <label>
+                                            <label className={styles.label}>
                                                 <Field
                                                     type="radio"
                                                     name="amount"
