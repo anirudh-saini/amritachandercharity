@@ -312,7 +312,7 @@ export const Donate = () => {
                   <div>
                     <div className={styles.input}>
                       <Field type="email" name="email" placeholder="  " />
-                      <label className={values.fullName ? styles.floating : ""}>
+                      <label className={values.email ? styles.floating : ""}>
                         Email
                       </label>
                       <ErrorMessage
@@ -324,7 +324,7 @@ export const Donate = () => {
 
                     <div className={styles.input}>
                       <Field type="text" name="mobile" />
-                      <label className={values.fullName ? styles.floating : ""}>
+                      <label className={values.mobile ? styles.floating : ""}>
                         Mobile Number
                       </label>
                       <ErrorMessage
@@ -337,7 +337,7 @@ export const Donate = () => {
 
                   <div className={styles.input}>
                     <Field type="text" name="address" />
-                    <label className={values.fullName ? styles.floating : ""}>
+                    <label className={values.address ? styles.floating : ""}>
                       Address
                     </label>
                     <ErrorMessage
@@ -356,7 +356,7 @@ export const Donate = () => {
                           fetchCityState(e.target.value, setFieldValue)
                         }
                       />
-                      <label className={values.fullName ? styles.floating : ""}>
+                      <label className={values.pincode ? styles.floating : ""}>
                         Pincode
                       </label>
                       <ErrorMessage
@@ -368,7 +368,7 @@ export const Donate = () => {
 
                     <div className={styles.input}>
                       <Field type="text" name="city" readOnly />
-                      <label className={values.fullName ? styles.floating : ""}>
+                      <label className={values.city ? styles.floating : ""}>
                         City
                       </label>
                     </div>
@@ -376,7 +376,7 @@ export const Donate = () => {
                   <div>
                     <div className={styles.input}>
                       <Field type="text" name="state" readOnly />
-                      <label className={values.fullName ? styles.floating : ""}>
+                      <label className={values.state ? styles.floating : ""}>
                         State
                       </label>
                     </div>
@@ -389,7 +389,7 @@ export const Donate = () => {
 
                   <div className={styles.input}>
                     <Field type="text" name="pan" />
-                    <label className={values.fullName ? styles.floating : ""}>
+                    <label className={values.pan ? styles.floating : ""}>
                       PAN Number
                     </label>
                     <ErrorMessage
@@ -411,9 +411,12 @@ export const Donate = () => {
                     <span style={{ display: isExpandedp1 ? "inline" : "none" }}>
                       These details shall not be divulged for any other purpose.
                       By sharing your details, you agree to receive stories and
-                      updates from CRY via mobile, Whatsapp, landline, email and
-                      post. If you&apos;d like to change this, please send us an
-                      email on writetous@crymail.org
+                      updates from Amrita Chander Charity via mobile, Whatsapp,
+                      landline, email and post. If you&apos;d like to change
+                      this, please send us an email on{" "}
+                      <a href="mailto:mail@amritachandercharity.org.in">
+                        mail@amritachandercharity.org.in
+                      </a>
                     </span>
                     <span>
                       <button onClick={toggleReadMorep1}>

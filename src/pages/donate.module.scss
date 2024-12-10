@@ -158,6 +158,11 @@
           padding: 0;
           font-weight: 600;
         }
+        a {
+          text-decoration: none;
+          color: #484848;
+          font-size: 0.8rem;
+        }
       }
       .error {
         font-size: 0.8rem;
@@ -169,7 +174,7 @@
         font-weight: 600;
       }
       .input:focus-within label {
-        top: -0.8em;
+        top: -1em;
         font-size: 0.8em;
         color: #333;
       }
