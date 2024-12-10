@@ -247,7 +247,7 @@ export const Donate = () => {
                         checked={values.customamount === "custom"}
                       />
                       <Field
-                        type="text"
+                        type="number"
                         name="customAmount"
                         min="0"
                         max="10000000"
@@ -444,7 +444,9 @@ export const Donate = () => {
                     component="div"
                     className={styles.error}
                   />
-                  <button className={styles.submit} type="submit">Continue to Payment</button>
+                  <button className={styles.submit} type="submit">
+                    Continue to Payment
+                  </button>
                 </div>
               </Form>
             )}
