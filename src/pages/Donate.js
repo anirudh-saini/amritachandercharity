@@ -63,6 +63,10 @@ export const Donate = () => {
   };
 
   const validationSchema = Yup.object({
+    terms: Yup.boolean()
+      .oneOf([true], "Checkbox should be checked before continuing.")
+      .required("Required"),
+
     fullName: Yup.string().required("Full Name is required"),
     email: Yup.string()
       .email("Invalid email address")
@@ -167,6 +171,7 @@ export const Donate = () => {
               city: "",
               state: "",
               country: "India",
+              terms: false,
             }}
             validationSchema={validationSchema}
             onSubmit={(values) => {
@@ -417,8 +422,9 @@ export const Donate = () => {
                     </span>
                   </p>
                   <p>
-                    I hereby declare that I am a citizen of India, making this
-                    donation out of my own funds. The information
+                    <Field type="checkbox" name="terms" />I hereby declare that
+                    I am a citizen of India, making this donation out of my own
+                    funds. The information
                     <span style={{ display: isExpandedp2 ? "none" : "inline" }}>
                       ...
                     </span>
@@ -433,9 +439,12 @@ export const Donate = () => {
                       </button>
                     </span>
                   </p>
-
-                  <p>Checkbox should be checked before continuing.</p>
-                  <button type="submit">Continue to Payment</button>
+                  <ErrorMessage
+                    name="terms"
+                    component="div"
+                    className={styles.error}
+                  />
+                  <button className={styles.submit} type="submit">Continue to Payment</button>
                 </div>
               </Form>
             )}

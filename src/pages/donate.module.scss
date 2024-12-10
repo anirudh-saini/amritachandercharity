@@ -1,3 +1,4 @@
+@use "/src/styles/media_queries" as ab;
 .donate {
   height: 50vh;
   width: 100%;
@@ -26,6 +27,12 @@
   > div {
     // outline: 2px solid red;
     width: 50%;
+  }
+  @include ab.screen-60 {
+    flex-direction: column-reverse;
+    > div {
+      width: 100%;
+    }
   }
   .para {
     display: flex;
@@ -135,7 +142,7 @@
       border-radius: 0.5em;
       display: flex;
       flex-direction: column;
-      gap: 1em;
+      gap: 1.5em;
       padding: 2em;
       p {
         // display: flex;
@@ -148,6 +155,8 @@
           border: none;
           background-color: white;
           color: #344b9b;
+          padding: 0;
+          font-weight: 600;
         }
       }
       .error {
@@ -155,7 +164,7 @@
         color: #b22222;
       }
       .pan {
-        font-size: 1rem;
+        font-size: clamp(0.8rem, 1vi, 1rem);
         color: #b22222;
         font-weight: 600;
       }
@@ -190,7 +199,10 @@
 
       > div {
         display: flex;
-        gap: 1em; // Adjust the gap to your preference
+        gap: 1.5em;
+        @include ab.screen-40 {
+          flex-direction: column;
+        }
       }
 
       .input input {
@@ -213,6 +225,15 @@
       }
       .input.full_name {
         flex: 1; // Allows Full Name input to take 50% of the width
+      }
+      .submit {
+        // outline: 2px solid red;
+        border: none;
+        border-radius: 1.5em;
+        background-color: #344b9b;
+        color: white;
+        padding-block: 0.5em;
+        cursor: pointer;
       }
     }
   }
