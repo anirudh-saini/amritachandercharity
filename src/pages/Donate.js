@@ -9,7 +9,7 @@ export const Donate = () => {
   const status = searchParams.get("status");
   const orderId = searchParams.get("orderId");
   const reason = searchParams.get("reason");
-
+  const api_url = process.env.REACT_APP_API;
   useEffect(() => {
     if (status === "success") {
       alert(`Payment Successful! Your Order ID: ${orderId}`);
@@ -189,15 +189,18 @@ export const Donate = () => {
               state: "",
               country: "India",
               terms: false,
+              dateOfBirth: "",
             }}
             validationSchema={validationSchema}
             onSubmit={async (values, { setSubmitting }) => {
               try {
                 const response = await axios.post(
-                  "/api/payment/initiate",
+                  `http://${api_url}/api/payment/initiate`,
                   values
                 );
                 if (response.data && response.data.payment_url) {
+                  console.log(response.data.payment_url);
+
                   window.location.href = response.data.payment_url; // Redirect to Paytm payment page
                 } else {
                   alert("Payment initiation failed. Please try again.");
