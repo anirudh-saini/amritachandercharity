@@ -8,17 +8,93 @@ import { Privacy } from "./pages/Privacy";
 import { Contact } from "./pages/Contact";
 import { Media } from "./pages/Media";
 import { Donate } from "./pages/Donate";
+import { Helmet } from "react-helmet";
+
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/contact-us" element={<Contact />} />
-        <Route path="/media" element={<Media />} />
-        <Route path="/donate" element={<Donate />} />
+        <Route
+          exact
+          path="/"
+          element={
+            <>
+              <Helmet>
+                <title>Amrita Chander Charity - Help a student today</title>
+              </Helmet>
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <>
+              <Helmet>
+                <title>Amrita Chander Charity's Team Helping People</title>
+              </Helmet>
+              <Gallery />
+            </>
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+            <>
+              <Helmet>
+                <title>Learn About Amrita Chander Charity</title>
+              </Helmet>
+              <About />
+            </>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <>
+              <Helmet>
+                <title>Privacy Policy</title>
+              </Helmet>
+              <Privacy />
+            </>
+          }
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <>
+              <Helmet>
+                <title>Get in Touch with Amrita Chander Charity Today!</title>
+              </Helmet>
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/media"
+          element={
+            <>
+              <Helmet>
+                <title>Amrita Chander Charity in News</title>
+              </Helmet>
+              <Media />
+            </>
+          }
+        />
+        <Route
+          path="/donate"
+          element={
+            <>
+              <Helmet>
+                <title>
+                  Donate Today & Help India's Children with Amrita Chander
+                  Charity
+                </title>
+              </Helmet>
+              <Donate />
+            </>
+          }
+        />
       </Route>
     </Routes>
   );

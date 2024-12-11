@@ -1,9 +1,23 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styles from "./donate.module.scss";
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 export const Donate = () => {
+  const [searchParams] = useSearchParams();
+  const status = searchParams.get("status");
+  const orderId = searchParams.get("orderId");
+  const reason = searchParams.get("reason");
+
+  useEffect(() => {
+    if (status === "success") {
+      alert(`Payment Successful! Your Order ID: ${orderId}`);
+    } else if (status === "failure") {
+      alert(`Payment Failed: ${reason}`);
+    }
+  }, [status, orderId, reason]);
+
   const [isExpandedp1, setIsExpandedp1] = useState(false);
 
   const toggleReadMorep1 = () => {
@@ -14,21 +28,24 @@ export const Donate = () => {
     setIsExpandedp2(!isExpandedp2);
   };
   const [message, setMessage] = useState(
-    "₹1000 helps provide essential school supplies."
+    "Educate 1 underprivileged children for 6 months through Amrita Chander Jan Kalyan Charity"
   );
   const [isEligible, setIsEligible] = useState(true);
   const amounts = {
-    1000: "₹1000 helps provide essential school supplies.",
-    2000: "₹2000 ensures nutrition for a child for a month.",
-    4000: "₹4000 supports a child's education for a semester.",
-    10000: "₹10000 supports a child's education for a semester.",
+    1000: "Educate 1 underprivileged children for 6 months through Amrita Chander Jan Kalyan Charity",
+    2000: "Educate 1 underprivileged children for a year through Amrita Chander Jan Kalyan Charity",
+    4000: "Educate 2 underprivileged children for a year through Amrita Chander Jan Kalyan Charity",
+    10000:
+      "Educate 5 underprivileged children for a year through Amrita Chander Jan Kalyan Charity",
   };
 
   const handleAmountChange = (amount, setFieldValue) => {
     console.log(amount);
     if (amount === "custom") {
       setFieldValue("customamount", "custom");
-      setMessage("Enter a custom donation amount.");
+      setMessage(
+        "Educate underprivileged children through Amrita Chander Jan Kalyan Charity"
+      );
     } else if (amounts[amount]) {
       setFieldValue("customamount", "");
       setMessage(amounts[amount]);
@@ -174,8 +191,23 @@ export const Donate = () => {
               terms: false,
             }}
             validationSchema={validationSchema}
-            onSubmit={(values) => {
-              alert(`Donation Successful: ${JSON.stringify(values, null, 2)}`);
+            onSubmit={async (values, { setSubmitting }) => {
+              try {
+                const response = await axios.post(
+                  "/api/payment/initiate",
+                  values
+                );
+                if (response.data && response.data.payment_url) {
+                  window.location.href = response.data.payment_url; // Redirect to Paytm payment page
+                } else {
+                  alert("Payment initiation failed. Please try again.");
+                }
+              } catch (error) {
+                console.error("Payment initiation failed:", error);
+                alert("An error occurred while initiating payment.");
+              } finally {
+                setSubmitting(false);
+              }
             }}
           >
             {({ values, setFieldValue, placeholder }) => (

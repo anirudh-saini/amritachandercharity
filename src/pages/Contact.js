@@ -30,7 +30,7 @@ export const Contact = () => {
   const handleSubmit = async (values, { resetForm, setSubmitting }) => {
     try {
       console.log("API URL:", api_url);
-      const response = await axios.post(`http://${api_url}/mail/send`, values);
+      const response = await axios.post(`http://${api_url}/api/send`, values);
       if (response.status === 200) {
         alert("Form Submitted Successfully!");
         resetForm(); // Reset form fields
