@@ -34,11 +34,17 @@ export const Footer = () => {
                                 <a href="/about-us">About Us</a>
                                 <a href="/contact-us">Contact Us</a>
                                 <a href="/donate">Donate</a>
+                                <a href="/gallery">Gallery</a>
                             </div>
                             <div>
-                                <a href="/gallery">Gallery</a>
                                 <a href="/media">Media</a>
                                 <a href="/privacy-policy">Privacy Policy</a>
+                                <a href="/terms_and_conditions.pdf" download>
+                                    Terms and Conditions
+                                </a>
+                                <a href="/refund_policy.pdf" download>
+                                    Refund Policy
+                                </a>
                             </div>
                         </div>
                     </div>
