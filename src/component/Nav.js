@@ -20,6 +20,7 @@ export const Nav = () => {
     };
   }, [isOpen]);
   const donate = () => {
+    setIsOpen(!isOpen);
     navigate("/donate");
   };
   return (
