@@ -39,16 +39,28 @@ export const Nav = () => {
                         </a>
                     </div>
                     <div>
-                        <a href="/">
+                        <a
+                            href="https://www.instagram.com/amritachandercharity?igsh=MTVtcmw0ZmU0MXZhbA=="
+                            target="_black"
+                        >
                             <img src={`${apiUrl}/insta.svg`} alt="social" />
                         </a>
-                        <a href="/">
+                        <a
+                            href="https://www.linkedin.com/company/amritachandercharity/"
+                            target="_black"
+                        >
                             <img src={`${apiUrl}/linkedin.svg`} alt="social" />
                         </a>
-                        <a href="/">
+                        <a
+                            href="https://www.facebook.com/people/Amrita-Chander-Charity/100084226626591/"
+                            target="_black"
+                        >
                             <img src={`${apiUrl}/facebook.svg`} alt="social" />
                         </a>
-                        <a href="/">
+                        <a
+                            href="https://youtube.com/@amritachandercharitabletrust?si=HEOCo0X-PufbicGq"
+                            target="_black"
+                        >
                             <img src={`${apiUrl}/youtube.svg`} alt="social" />
                         </a>
                     </div>
