@@ -1,102 +1,103 @@
 @use "/src/styles/media_queries" as ab;
 .gallery {
-  height: 50vh;
-  width: 100%;
-  // outline: 2px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.23991594928987214) 0%,
-      rgba(0, 0, 0, 0.42759101931788346) 0%
-    ),
-    url("../../public/gallery/gallery2/g4.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  h1 {
-    font-size: clamp(2rem, 4vi, 4rem);
-  }
+    height: 50vh;
+    width: 100%;
+    // outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.23991594928987214) 0%,
+            rgba(0, 0, 0, 0.42759101931788346) 0%
+        ),
+        url("../../public/gallery/gallery2/g4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        font-size: clamp(2rem, 4vi, 4rem);
+    }
 }
 .color {
-  background-color: #ebf9fe;
+    background-color: #ebf9fe;
 }
 .gallery1 {
-  margin-top: 2em;
+    margin-top: 2em;
 
-  text-align: center;
-  padding-block: 2em;
-  p {
-    font-weight: 600;
-    color: #344b9b;
-    padding-bottom: 1em;
-    font-size: 1.66rem;
-  }
-  .slide {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1em;
-    // outline: 2px solid red;
-    img {
-      // outline: 2px solid red;
-      justify-self: center;
-      border-radius: 0.3em;
-      width: 10em;
-      aspect-ratio: 1;
+    text-align: center;
+    padding-block: 2em;
+    p {
+        font-weight: 600;
+        color: #344b9b;
+        padding-bottom: 1em;
+        font-size: 1.66rem;
     }
-  }
+    .slide {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+        // outline: 2px solid red;
+        img {
+            // outline: 2px solid red;
+            justify-self: center;
+            border-radius: 0.3em;
+            width: 10em;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }
 }
 .gallery2 {
-  margin-top: 2em;
-  background-color: #ebf9fe;
-  padding-block: 2em;
-  display: grid;
-  grid-template-columns: 70% 30%;
-  gap: 1em;
-  @include ab.screen-53 {
-    display: flex;
-    flex-direction: column;
-  }
-  .slide {
-    grid-column: 1 / 2;
+    margin-top: 2em;
+    background-color: #ebf9fe;
+    padding-block: 2em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 70% 30%;
     gap: 1em;
+    @include ab.screen-53 {
+        display: flex;
+        flex-direction: column;
+    }
+    .slide {
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
 
-    img {
-      justify-self: center;
-      border-radius: 0.3em;
-      width: 10em;
-      aspect-ratio: 1;
-    }
-  }
-  > :nth-child(2) {
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    @include ab.screen-50 {
-      text-align: center;
-    }
-    p {
-      font-weight: 700;
-      color: #344b9b;
-      font-size: 1.2rem;
-    }
-    > div {
-      > div {
-        // outline: 2px solid red;
-        padding-inline: 1em;
-        padding-block: 0.8em;
-        text-align: center;
-        background-color: #344b9b;
-        p {
-          color: white;
+        img {
+            justify-self: center;
+            border-radius: 0.3em;
+            width: 10em;
+            aspect-ratio: 1;
+            object-fit: cover;
         }
-      }
     }
-   
-  }
+    > :nth-child(2) {
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        @include ab.screen-50 {
+            text-align: center;
+        }
+        p {
+            font-weight: 700;
+            color: #344b9b;
+            font-size: 1.2rem;
+        }
+        > div {
+            > div {
+                // outline: 2px solid red;
+                padding-inline: 1em;
+                padding-block: 0.8em;
+                text-align: center;
+                background-color: #344b9b;
+                p {
+                    color: white;
+                }
+            }
+        }
+    }
 }
