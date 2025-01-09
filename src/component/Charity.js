@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./charity.module.scss";
 export const Charity = () => {
-  return (
-    <div className={styles.charity}>
-      <div className="container">
+    return (
+        <div className={styles.charity}>
+            {/* <div className="container">
         <div className={styles.make}>
           <h2>MAKE YOUR OWN DAY OF CHARITY</h2>
           <p>
@@ -35,7 +35,7 @@ export const Charity = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
+      </div> */}
+        </div>
+    );
 };

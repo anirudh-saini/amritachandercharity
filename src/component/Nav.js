@@ -119,25 +119,37 @@ export const Nav = () => {
                             <li>
                                 <div className={styles.media}>
                                     <div>
-                                        <a href="/">
+                                        <a
+                                            href="https://www.instagram.com/amritachandercharity?igsh=MTVtcmw0ZmU0MXZhbA=="
+                                            target="_black"
+                                        >
                                             <img
                                                 src={`${apiUrl}/insta_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
-                                        <a href="/">
+                                        <a
+                                            href="https://www.linkedin.com/company/amritachandercharity/"
+                                            target="_black"
+                                        >
                                             <img
                                                 src={`${apiUrl}/linkedin_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
-                                        <a href="/">
+                                        <a
+                                            href="https://www.facebook.com/people/Amrita-Chander-Charity/100084226626591/"
+                                            target="_black"
+                                        >
                                             <img
                                                 src={`${apiUrl}/facebook_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
-                                        <a href="/">
+                                        <a
+                                            href="https://youtube.com/@amritachandercharitabletrust?si=HEOCo0X-PufbicGq"
+                                            target="_black"
+                                        >
                                             <img
                                                 src={`${apiUrl}/youtube_nav.svg`}
                                                 alt="social"

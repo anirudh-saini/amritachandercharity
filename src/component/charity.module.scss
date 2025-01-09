@@ -1,16 +1,12 @@
 @use "/src/styles/media_queries" as ab;
 
 .charity {
-    background: linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.23991594928987214) 0%,
-            rgba(0, 0, 0, 0.42759101931788346) 0%
-        ),
-        url("../../public/hero/h4.jpeg"); /* Layer the image below the gradient */
+    background: url("../../public/hero/h4.jpeg"); /* Layer the image below the gradient */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    height: 85vh;
+    width: 100%;
     > div {
         display: flex;
         gap: clamp(3em, 4vi, 4em);

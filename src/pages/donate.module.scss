@@ -1,245 +1,249 @@
 @use "/src/styles/media_queries" as ab;
 .donate {
-  height: 50vh;
-  width: 100%;
-  //   outline: 2px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.23991594928987214) 0%,
-      rgba(0, 0, 0, 0.42759101931788346) 0%
-    ),
-    url("../../public/about.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  h1 {
-    font-size: clamp(2rem, 4vi, 4rem);
-  }
+    height: 50vh;
+    width: 100%;
+    //   outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.23991594928987214) 0%,
+            rgba(0, 0, 0, 0.42759101931788346) 0%
+        ),
+        url("../../public/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        font-size: clamp(2rem, 4vi, 4rem);
+    }
 }
 .content {
-  display: flex;
-  gap: clamp(1em, 3vi, 3em);
-  margin-block: 3em;
-  > div {
-    // outline: 2px solid red;
-    width: 50%;
-  }
-  @include ab.screen-60 {
-    flex-direction: column-reverse;
+    display: flex;
+    gap: clamp(1em, 3vi, 3em);
+    margin-block: 3em;
     > div {
-      width: 100%;
-    }
-  }
-  .para {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1em, 2vi, 2em);
-    > :nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-      ul {
-        margin: 0;
-        padding: 0;
-        li {
-          list-style: none;
-        }
-      }
-    }
-  }
-  .donation_form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8em;
-    .form_1 {
-      h2 {
-        padding-block: clamp(1em, 2vi, 2em);
-        padding-inline: 1em;
-        font-size: clamp(1.2rem, 1.8vi, 1.8rem);
-        border-bottom: 0.01em solid grey;
-        background-color: #f7f7f7;
-        border-radius: 0.8em 0.8em 0 0;
-      }
-      > div {
-        p {
-          display: flex;
-          gap: 0.5em;
-          font-size: 0.8rem;
-          color: #484848;
-          font-weight: 500;
-        }
-        .message {
-          color: #272727;
-          font-weight: 400;
-        }
-        border: 0.1em solid #344b9b;
-        border-top: none;
-        border-radius: 0 0 0.5em 0.5em;
-        padding: 2em;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        > div {
-          .label {
-            padding-block: 0.8em;
-            box-shadow: 0px 4px 5px #5a5a5a7a;
-          }
-        }
-
-        label:has([type="radio"]:not(:disabled)) {
-          cursor: pointer;
-          // outline: 2px solid red;
-          font-weight: 500;
-          border-radius: 0.5em;
-          // padding-block: 0.8em;
-        }
-        label:has([type="radio"]:not(:checked)) {
-          background-color: #fdfcf9;
-          border: 0.1em solid #e8e6de;
-        }
-        label:has([type="radio"]:checked) {
-          border-color: #344b9b;
-          background-color: #344b9b;
-          color: #fff;
-          box-shadow: 0px 4px 6px rgba(52, 75, 155, 0.4);
-          > input {
-            background-color: #344b9b;
-            border-color: #344b9b;
-            color: #fff;
-          }
-        }
-
-        input[type="radio"] {
-          display: none; /* Hide the radio button */
-        }
-        .custom {
-          input {
-            padding-left: 0.8em;
-            width: 100%;
-            padding-block: 0.8em;
-            background-color: #fdfcf9;
-            border: 0.1em solid #e8e6de;
-            border-radius: 0.5em;
-          }
-        }
-        > div {
-          display: flex;
-          gap: 1em;
-          label {
-            padding-block: 0.5em;
-            text-align: center;
-            width: 100%;
-          }
-        }
-      }
-    }
-    .form_2 {
-      border: 0.1em solid #344b9b;
-      border-radius: 0.5em;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
-      padding: 2em;
-      p {
-        // display: flex;
-        // gap: 0.5em;
-        font-size: 0.8rem;
-        color: #484848;
-        font-weight: 500;
-        button {
-          cursor: pointer;
-          border: none;
-          background-color: white;
-          color: #344b9b;
-          padding: 0;
-          font-weight: 600;
-        }
-        a {
-          text-decoration: none;
-          color: #484848;
-          font-size: 0.8rem;
-        }
-      }
-      .error {
-        font-size: 0.8rem;
-        color: #b22222;
-      }
-      .pan {
-        font-size: clamp(0.8rem, 1vi, 1rem);
-        color: #b22222;
-        font-weight: 600;
-      }
-      .input:focus-within label {
-        top: -1em;
-        font-size: 0.8em;
-        color: #333;
-      }
-
-      .input {
-        .floating {
-          top: -1em;
-          font-size: 0.8em;
-          color: #333;
-        }
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        position: relative;
-        padding-left: 0.5em;
-        label {
-          position: absolute;
-          top: 0.2em;
-          left: 0.5em;
-          pointer-events: none;
-          transition: 0.2s ease all;
-          -moz-transition: 0.2s ease all;
-          -webkit-transition: 0.2s ease all;
-        }
-        // border-bottom: 0.1em solid black; // Ensures the inputs take up equal space
-      }
-
-      > div {
-        display: flex;
-        gap: 1.5em;
-        @include ab.screen-40 {
-          flex-direction: column;
-        }
-      }
-
-      .input input {
-        width: 100%;
-        border: none;
-        border-bottom: 0.1em solid black; // Ensures the input takes full width within its container
-      }
-      .input input:focus {
-        border: none;
-        border-bottom: 0.1em solid black; // Remove border when focused
-        outline: none;
-      }
-      // .input input:focus + label {
-      //   outline: 2px solid red;
-      //   top: -80px;
-      //   font-size: 13px;
-      // }
-      .input.date_of_birth {
-        flex: 1;
-      }
-      .input.full_name {
-        flex: 1; // Allows Full Name input to take 50% of the width
-      }
-      .submit {
         // outline: 2px solid red;
-        border: none;
-        border-radius: 1.5em;
-        background-color: #344b9b;
-        color: white;
-        padding-block: 0.5em;
-        cursor: pointer;
-      }
+        width: 50%;
     }
-  }
+    @include ab.screen-60 {
+        flex-direction: column-reverse;
+        > div {
+            width: 100%;
+        }
+    }
+    .para {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1em, 2vi, 2em);
+        > :nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+    .donation_form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+        .form_1 {
+            h2 {
+                padding-block: clamp(1em, 2vi, 2em);
+                padding-inline: 1em;
+                font-size: clamp(1.2rem, 1.8vi, 1.8rem);
+                border-bottom: 0.01em solid grey;
+                background-color: #f7f7f7;
+                border-radius: 0.8em 0.8em 0 0;
+            }
+            > div {
+                p {
+                    display: flex;
+                    gap: 0.5em;
+                    font-size: 0.8rem;
+                    color: #484848;
+                    font-weight: 500;
+                }
+                .message {
+                    color: #272727;
+                    font-weight: 400;
+                }
+                border: 0.1em solid #344b9b;
+                border-top: none;
+                border-radius: 0 0 0.5em 0.5em;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                > div {
+                    .label {
+                        padding-block: 0.8em;
+                        box-shadow: 0px 4px 5px #5a5a5a7a;
+                    }
+                }
+
+                label:has([type="radio"]:not(:disabled)) {
+                    cursor: pointer;
+                    // outline: 2px solid red;
+                    font-weight: 500;
+                    border-radius: 0.5em;
+                    // padding-block: 0.8em;
+                }
+                label:has([type="radio"]:not(:checked)) {
+                    background-color: #fdfcf9;
+                    border: 0.1em solid #e8e6de;
+                }
+                label:has([type="radio"]:checked) {
+                    border-color: #344b9b;
+                    background-color: #344b9b;
+                    color: #fff;
+                    box-shadow: 0px 4px 6px rgba(52, 75, 155, 0.4);
+                    > input {
+                        background-color: #344b9b;
+                        border-color: #344b9b;
+                        color: #fff;
+                    }
+                }
+
+                input[type="radio"] {
+                    display: none; /* Hide the radio button */
+                }
+                .custom {
+                    input {
+                        padding-left: 0.8em;
+                        width: 100%;
+                        padding-block: 0.8em;
+                        background-color: #fdfcf9;
+                        border: 0.1em solid #e8e6de;
+                        border-radius: 0.5em;
+                    }
+                }
+                > div {
+                    display: flex;
+                    gap: 1em;
+                    label {
+                        padding-block: 0.5em;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .form_2 {
+            border: 0.1em solid #344b9b;
+            border-radius: 0.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            padding: 2em;
+            p {
+                // display: flex;
+                // gap: 0.5em;
+                font-size: 0.8rem;
+                color: #484848;
+                font-weight: 500;
+                button {
+                    cursor: pointer;
+                    border: none;
+                    background-color: white;
+                    color: #344b9b;
+                    padding: 0;
+                    font-weight: 600;
+                }
+                a {
+                    text-decoration: none;
+                    color: #484848;
+                    font-size: 0.8rem;
+                }
+            }
+            .error {
+                font-size: 0.8rem;
+                color: #b22222;
+            }
+            .pan {
+                font-size: clamp(0.8rem, 1vi, 1rem);
+                color: #b22222;
+                font-weight: 600;
+            }
+            .input:focus-within label {
+                top: -1em;
+                font-size: 0.8em;
+                color: #333;
+            }
+
+            .input {
+                .floating {
+                    top: -1em;
+                    font-size: 0.8em;
+                    color: #333;
+                }
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                position: relative;
+                padding-left: 0.5em;
+                label {
+                    position: absolute;
+                    top: 0.2em;
+                    left: 0.5em;
+                    pointer-events: none;
+                    transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                }
+                // border-bottom: 0.1em solid black; // Ensures the inputs take up equal space
+            }
+
+            > div {
+                display: flex;
+                gap: 1.5em;
+                @include ab.screen-40 {
+                    flex-direction: column;
+                }
+            }
+
+            .input input {
+                width: 100%;
+                border: none;
+                border-bottom: 0.1em solid black; // Ensures the input takes full width within its container
+            }
+            .input input:focus {
+                border: none;
+                border-bottom: 0.1em solid black; // Remove border when focused
+                outline: none;
+            }
+            // .input input:focus + label {
+            //   outline: 2px solid red;
+            //   top: -80px;
+            //   font-size: 13px;
+            // }
+            .input.date_of_birth {
+                flex: 1;
+            }
+            .input.full_name {
+                flex: 1; // Allows Full Name input to take 50% of the width
+            }
+            .submit {
+                // outline: 2px solid red;
+                border: none;
+                border-radius: 1.5em;
+                background-color: #344b9b;
+                color: white;
+                padding-block: 0.5em;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.required::after {
+    content: " *";
+    color: red;
 }
