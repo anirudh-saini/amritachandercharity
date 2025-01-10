@@ -83,7 +83,7 @@ export const Donate = () => {
             .oneOf([true], "Checkbox should be checked before continuing.")
             .required("Required"),
 
-        fullName: Yup.string().required("Full Name is required"),
+        fullName: Yup.string().required("Full name is required"),
         email: Yup.string()
             .email("Invalid email address")
             .required("Email is required"),
@@ -100,7 +100,7 @@ export const Donate = () => {
             .required("Please select an amount")
             .max(10000000, "Amount cannot exceed ₹10,000,000"),
         dateOfBirth: Yup.date()
-            .required("Date of Birth is required")
+            .required("Date of birth is required")
             .test(
                 "age",
                 "You must be at least 18 years old to donate",
@@ -423,7 +423,7 @@ export const Donate = () => {
                                             </label>
                                             <ErrorMessage
                                                 className={styles.error}
-                                                name="fullName"
+                                                name="dateOfBirth"
                                                 component="div"
                                             />
                                         </div>
@@ -474,7 +474,9 @@ export const Donate = () => {
                                         </div>
                                     </div>
 
-                                    <div className={styles.input}>
+                                    <div
+                                        className={`${styles.address} ${styles.input}`}
+                                    >
                                         <Field type="text" name="address" />
                                         <label
                                             className={`${styles.required} ${
@@ -500,12 +502,23 @@ export const Donate = () => {
                                             <Field
                                                 type="text"
                                                 name="pincode"
-                                                onBlur={(e) =>
-                                                    fetchCityState(
-                                                        e.target.value,
-                                                        setFieldValue
-                                                    )
-                                                }
+                                                onChange={(e) => {
+                                                    const newPincode =
+                                                        e.target.value;
+                                                    setFieldValue(
+                                                        "pincode",
+                                                        newPincode
+                                                    ); // Update the field value in Formik
+
+                                                    if (
+                                                        newPincode.length === 6
+                                                    ) {
+                                                        fetchCityState(
+                                                            newPincode,
+                                                            setFieldValue
+                                                        );
+                                                    }
+                                                }}
                                             />
                                             <label
                                                 className={`${
