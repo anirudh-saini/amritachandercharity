@@ -9,7 +9,7 @@ export const Donate = () => {
     const status = searchParams.get("status");
     const orderId = searchParams.get("orderId");
     const reason = searchParams.get("reason");
-    const api_url = process.env.REACT_APP_API;
+    const api_url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         if (status === "success") {
             alert(`Payment Successful! Your Order ID: ${orderId}`);
@@ -203,7 +203,7 @@ export const Donate = () => {
                         onSubmit={async (values, { setSubmitting }) => {
                             try {
                                 const response = await axios.post(
-                                    `http://${api_url}/api/payment/initiate`,
+                                    `${api_url}/api/payment/initiate`,
                                     values
                                 );
                                 if (

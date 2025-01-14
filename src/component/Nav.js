@@ -7,7 +7,7 @@ export const Nav = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    const apiUrl = process.env.REACT_APP_API_URL;
+    const Url = process.env.REACT_APP_BASE_URL;
 
     useEffect(() => {
         if (isOpen) {
@@ -30,11 +30,11 @@ export const Nav = () => {
                 <div className={`container ${styles.social}`}>
                     <div>
                         <a href="tel:+91 1144753285">
-                            <img src={`${apiUrl}/phone.svg`} alt="phone" />
+                            <img src={`${Url}/phone.svg`} alt="phone" />
                             <p>+91 1144753285</p>
                         </a>
                         <a href="mailto:mail@amritachandercharity.org.in">
-                            <img src={`${apiUrl}/email.svg`} alt="mail" />
+                            <img src={`${Url}/email.svg`} alt="mail" />
                             <p>mail@amritachandercharity.org.in</p>
                         </a>
                     </div>
@@ -43,25 +43,25 @@ export const Nav = () => {
                             href="https://www.instagram.com/amritachandercharity?igsh=MTVtcmw0ZmU0MXZhbA=="
                             target="_black"
                         >
-                            <img src={`${apiUrl}/insta.svg`} alt="social" />
+                            <img src={`${Url}/insta.svg`} alt="social" />
                         </a>
                         <a
                             href="https://www.linkedin.com/company/amritachandercharity/"
                             target="_black"
                         >
-                            <img src={`${apiUrl}/linkedin.svg`} alt="social" />
+                            <img src={`${Url}/linkedin.svg`} alt="social" />
                         </a>
                         <a
                             href="https://www.facebook.com/people/Amrita-Chander-Charity/100084226626591/"
                             target="_black"
                         >
-                            <img src={`${apiUrl}/facebook.svg`} alt="social" />
+                            <img src={`${Url}/facebook.svg`} alt="social" />
                         </a>
                         <a
                             href="https://youtube.com/@amritachandercharitabletrust?si=HEOCo0X-PufbicGq"
                             target="_black"
                         >
-                            <img src={`${apiUrl}/youtube.svg`} alt="social" />
+                            <img src={`${Url}/youtube.svg`} alt="social" />
                         </a>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export const Nav = () => {
                 <nav className={`container ${styles.navbar}`}>
                     <div className={styles.navbar_logo}>
                         <a href="/">
-                            <img src={`${apiUrl}/logo.svg`} alt="logo" />
+                            <img src={`${Url}/logo.svg`} alt="logo" />
                         </a>
                     </div>
                     <div className={styles.hamburger} onClick={toggleMenu}>
@@ -124,7 +124,7 @@ export const Nav = () => {
                                             target="_black"
                                         >
                                             <img
-                                                src={`${apiUrl}/insta_nav.svg`}
+                                                src={`${Url}/insta_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
@@ -133,7 +133,7 @@ export const Nav = () => {
                                             target="_black"
                                         >
                                             <img
-                                                src={`${apiUrl}/linkedin_nav.svg`}
+                                                src={`${Url}/linkedin_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
@@ -142,7 +142,7 @@ export const Nav = () => {
                                             target="_black"
                                         >
                                             <img
-                                                src={`${apiUrl}/facebook_nav.svg`}
+                                                src={`${Url}/facebook_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
@@ -151,14 +151,14 @@ export const Nav = () => {
                                             target="_black"
                                         >
                                             <img
-                                                src={`${apiUrl}/youtube_nav.svg`}
+                                                src={`${Url}/youtube_nav.svg`}
                                                 alt="social"
                                             />
                                         </a>
                                     </div>
                                     <div>
                                         <img
-                                            src={`${apiUrl}/logo.svg`}
+                                            src={`${Url}/logo.svg`}
                                             alt="logo"
                                         />
                                     </div>
