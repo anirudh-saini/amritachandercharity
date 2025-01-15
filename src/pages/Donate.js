@@ -105,9 +105,10 @@ export const Donate = () => {
                 "age",
                 "You must be at least 18 years old to donate",
                 (value) => {
+                    if (!value) return false;
                     const today = new Date();
                     const birthDate = new Date(value);
-                    const age = today.getFullYear() - birthDate.getFullYear();
+                    let age = today.getFullYear() - birthDate.getFullYear();
                     const month = today.getMonth() - birthDate.getMonth();
                     if (
                         month < 0 ||
@@ -115,18 +116,20 @@ export const Donate = () => {
                     ) {
                         age--;
                     }
-                    // Check if the user is 18 or older
-                    const eligible = age >= 18;
-                    setIsEligible(eligible); // Set eligibility status
-                    return eligible;
+                    return age >= 18;
                 }
             ),
     });
     const minDate = "1900-01-01"; // Fixed minimum date of 1900
     const today = new Date();
-    const maxDate = new Date(today.setFullYear(today.getFullYear() - 18))
+    const maxDate = new Date(
+        today.getFullYear() - 18,
+        today.getMonth(),
+        today.getDate()
+    )
         .toISOString()
         .split("T")[0];
+
     return (
         <>
             <div className={styles.donate}>
