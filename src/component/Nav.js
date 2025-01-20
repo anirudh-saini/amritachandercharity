@@ -70,7 +70,10 @@ export const Nav = () => {
                 <nav className={`container ${styles.navbar}`}>
                     <div className={styles.navbar_logo}>
                         <a href="/">
-                            <img src={`${Url}/logo.svg`} alt="logo" />
+                            <img
+                                src={`${Url}/logo.png?cache-bust=${Date.now()}`}
+                                alt="logo"
+                            />
                         </a>
                     </div>
                     <div className={styles.hamburger} onClick={toggleMenu}>
