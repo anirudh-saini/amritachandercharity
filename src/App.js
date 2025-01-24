@@ -9,7 +9,8 @@ import { Contact } from "./pages/Contact";
 import { Media } from "./pages/Media";
 import { Donate } from "./pages/Donate";
 import { Helmet } from "react-helmet";
-
+import { Donation_failed } from "./pages/Donation_failed";
+import { Donation_successful } from "./pages/Donation_successful";
 function App() {
   return (
     <Routes>
@@ -92,6 +93,33 @@ function App() {
                 </title>
               </Helmet>
               <Donate />
+            </>
+          }
+        />
+        <Route
+          path="/donation-failed"
+          element={
+            <>
+              <Helmet>
+                <title>
+                  Donation Failed - Please Try Again | Amrita Chander Charity
+                </title>
+              </Helmet>
+              <Donation_failed />
+            </>
+          }
+        />
+
+        <Route
+          path="/donation-successful"
+          element={
+            <>
+              <Helmet>
+                <title>
+                  Thank You for Your Generosity | Amrita Chander Charity
+                </title>
+              </Helmet>
+              <Donation_successful />
             </>
           }
         />

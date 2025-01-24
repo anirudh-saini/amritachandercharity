@@ -205,6 +205,10 @@ export const Donate = () => {
                         validationSchema={validationSchema}
                         onSubmit={async (values, { setSubmitting }) => {
                             try {
+                                 localStorage.setItem(
+                                   "paymentAttempted",
+                                   "true"
+                                 );
                                 const response = await axios.post(
                                     `${api_url}/api/payment/initiate`,
                                     values
@@ -213,7 +217,7 @@ export const Donate = () => {
                                     response.data &&
                                     response.data.payment_url
                                 ) {
-                                    console.log(response.data.payment_url);
+                                    // console.log(response.data.payment_url);
 
                                     window.location.href =
                                         response.data.payment_url; // Redirect to Paytm payment page
@@ -223,10 +227,10 @@ export const Donate = () => {
                                     );
                                 }
                             } catch (error) {
-                                console.error(
-                                    "Payment initiation failed:",
-                                    error
-                                );
+                                // console.error(
+                                //     "Payment initiation failed:",
+                                //     error
+                                // );
                                 alert(
                                     "An error occurred while initiating payment."
                                 );
