@@ -18,6 +18,7 @@ export const Donation_successful = () => {
   }, [navigate]);
   return (
     <div>
+      <img src="/success.png" alt="Payment Successful" />
       <h1>Thank you for your donation!</h1>
       <p>You will be redirected to the homepage shortly...</p>
     </div>

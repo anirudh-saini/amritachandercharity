@@ -18,6 +18,7 @@ export const Donation_failed = () => {
   }, [navigate]);
   return (
     <div>
+      <img src="/failure.png" alt="Payment failed" />
       <h1>Donation Attempt Failed</h1>
       <p>You will be redirected to the donation page shortly...</p>
     </div>
