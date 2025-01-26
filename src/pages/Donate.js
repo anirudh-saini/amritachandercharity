@@ -10,13 +10,13 @@ export const Donate = () => {
     const orderId = searchParams.get("orderId");
     const reason = searchParams.get("reason");
     const api_url = process.env.REACT_APP_API_URL;
-    useEffect(() => {
-        if (status === "success") {
-            alert(`Payment Successful! Your Order ID: ${orderId}`);
-        } else if (status === "failure") {
-            alert(`Payment Failed: ${reason}`);
-        }
-    }, [status, orderId, reason]);
+    // useEffect(() => {
+    //     if (status === "success") {
+    //         alert(`Payment Successful! Your Order ID: ${orderId}`);
+    //     } else if (status === "failure") {
+    //         alert(`Payment Failed: ${reason}`);
+    //     }
+    // }, [status, orderId, reason]);
 
     const [isExpandedp1, setIsExpandedp1] = useState(false);
 
@@ -205,10 +205,14 @@ export const Donate = () => {
                         validationSchema={validationSchema}
                         onSubmit={async (values, { setSubmitting }) => {
                             try {
-                                 localStorage.setItem(
-                                   "paymentAttempted",
-                                   "true"
-                                 );
+                                localStorage.setItem(
+                                    "paymentAttempted",
+                                    "true"
+                                );
+                                console.log(
+                                    "Payment Attempted Set:",
+                                    localStorage.getItem("paymentAttempted")
+                                );
                                 const response = await axios.post(
                                     `${api_url}/api/payment/initiate`,
                                     values
